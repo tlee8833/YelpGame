@@ -2,9 +2,7 @@
 
 RESTFUL ROUTES
 
-name    url       verb    desc.
-
-===============================================
+name    url       verb    description
 
 INDEX   /games      GET     Display a list of all games
 
