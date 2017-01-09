@@ -16,8 +16,9 @@ var commentRoutes    = require("./routes/comments"),
     gameRoutes = require("./routes/games"),
     indexRoutes      = require("./routes/index")
     
-// mongoose.connect("mongodb://localhost/yelp_game_v12");
-mongoose.connect("mongodb://tony:1111@ds159328.mlab.com:59328/yelpgame");
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_game_v11"
+mongoose.connect(url);
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
